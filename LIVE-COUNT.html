@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIVE COUNT OF UKRAINE WAR</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+</head>
+<body>
+    <h1 style="font-size: 800%; margin-left: 22%;">LIVE COUNT</h1>
+    <h1 id="a" style="position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -moz-transform: translateX(-50%) translateY(-50%);
+                    -webkit-transform: translateX(-50%) translateY(-50%);
+                    transform: translateX(-50%) translateY(-50%);
+                    width: 50%; 
+                    font-size: 280%;"></h1>
+    <py-script>
+import datetime
+first_day = datetime.datetime(2022,2,24)
+second_day = datetime.datetime.now()
+delta_difference =  second_day - first_day
+data = "{} days".format(delta_difference.days)
+pyscript.write("a", "{} DAYS OF WAR IN UKRAINE".format(delta_difference.days))
+    </py-script>
+    <button style="margin-left: 39%;"><a href="https://www.defendukraine.org/donate">CLICK FOR DONATE AT UKRAINE ARMY</a></button>
+    <p style="bottom: 0px; margin-left: 45%;">STOP THE WAR</p>
+</body>
+</html>
